@@ -11,7 +11,7 @@ const Header = () => {
                 </div>
                 <nav className='flex justify-between items-center'>
                     <div className="icon px-3 text-lg">
-                        <span><i class="fa fa-shopping-cart" aria-hidden="true"></i></span>
+                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                     </div>
                     <div className="buttons px-3 text-xl">
                         <Link className='mx-5 font-semibold' to='/login'>Login</Link>
