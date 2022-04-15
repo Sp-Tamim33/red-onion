@@ -1,12 +1,17 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import GoogleLogo from "../../images/google.svg";
+import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
+import auth from "../../Firebase/firebase.init";
 
 
 
 const Signup = () => {
 
   const navigate = useNavigate()
+
+  const [signInWithGoogle] = useSignInWithGoogle(auth)
+
 
   return (
     <div className='auth-form-container '>
@@ -63,7 +68,7 @@ const Signup = () => {
           <div className='line-right' />
         </div>
         <div className='input-wrapper'>
-          <button className='google-auth'>
+          <button onClick={() => signInWithGoogle()} className='google-auth'>
             <img src={GoogleLogo} alt='' />
             <p> Continue with Google </p>
           </button>
