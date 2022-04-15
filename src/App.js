@@ -4,7 +4,8 @@ import './App.css';
 import Header from './Components/Header/Header';
 import Home from './Components/Home/Home';
 import Login from './Components/Login/Login';
-import SignUp from './Components/SignUp/SignUp';
+import Signup from './Components/Signup/SignUp';
+
 
 
 function App() {
@@ -15,7 +16,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home></Home>} />
         <Route path="login" element={<Login />} />
-        <Route path="signup" element={<SignUp />} />
+        <Route path="signup" element={<Signup></Signup>} />
       </Routes>
     </div>
   );
